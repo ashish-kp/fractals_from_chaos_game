@@ -23,3 +23,8 @@ As of yet, for the pentagon game, the following additioanl rule(s) is added:
 For a pentagon, the following image was obtained.
 ![alt text](https://github.com/ashish-kp/fractals_from_chaos_game/blob/main/twisted_pent.png)
 
+These were first tried out n VPython, and the links are below:
+- [triangle](https://www.glowscript.org/#/user/p.b.ashish786/folder/game/program/trianglegame)
+- [square](https://www.glowscript.org/#/user/p.b.ashish786/folder/game/program/quadranglegame)
+- [twisted pentagon](https://www.glowscript.org/#/user/p.b.ashish786/folder/game/program/pentagongame)
+
