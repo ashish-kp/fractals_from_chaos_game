@@ -1,0 +1,89 @@
+<head>
+    <style>
+    #canvas {
+        background-image: linear-gradient(to right, white, #DDDDDD);
+        width : 500px;
+        height : 500px;
+    }
+    </style>
+</head>
+<body>
+    <canvas id = "canvas"></canvas>
+    <script>
+    var point1 = [1000, 200];
+    var point2 = [200, 800];
+    var point3 = [1800, 800];
+    var point4 = [400, 1800];
+    var point5 = [1600, 1800];
+    var points = [point1, point2, point3, point4, point5];
+    can = document.getElementById("canvas");
+    can.width = 2000;
+    can.height = 2000;
+    ctx = can.getContext('2d');
+    
+    function draw() {
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = "red";
+        for (var x = 0; x < points.length; x++) {
+            var some_point = points[x]; 
+            ctx.beginPath();
+            ctx.arc(some_point[0], some_point[1], 5, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+        var iterations = 300000;
+        start_point = [200, 200];
+        ctx.beginPath();
+        ctx.arc(200, 200, 2, 0, 2 * Math.PI);
+        ctx.stroke();
+        var check = [0, 0];
+        while (iterations > 0) {   
+            var x1 = start_point[0];
+            var y1 = start_point[1];
+            var goto = choices();
+            if (iterations % 1 == 0) {
+                ctx.strokeStyle = "blue";}
+            else {
+                ctx.strokeStyle = "red";    
+                }
+            if (goto != check) {
+                var x2 = goto[0];
+                var y2 = goto[1];
+                var moveto1 = (x1 + x2) * 0.5;
+                var moveto2 = (y1 + y2) * 0.5;
+                ctx.beginPath();
+                ctx.arc(moveto1, moveto2, 1.5, 0, Math.PI * 2);
+                ctx.stroke();
+                start_point = [moveto1, moveto2];
+            }
+            check = goto;
+            iterations--;
+        }
+    }
+    
+    function choices() {
+        var value = Math.random();
+        //var res;
+        if (value < 0.2) 
+            res = points[0];
+        else if (value > 0.2 && value < 0.4)
+            res = points[1];
+        else if (value > 0.4 && value < 0.6)
+            res = points[2];
+        else if (value > 0.6 && value < 0.8)
+            res = points[3];
+        else
+            res = points[4];
+        return res;    
+    }
+    
+    function plot_point(po) {
+        x = po[0];
+        y = po[1];
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
+    
+    draw();
+    </script>
+</body>
