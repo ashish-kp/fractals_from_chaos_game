@@ -21,4 +21,5 @@ But for pentagons, the simple rules, gave a somewhat incoherent, but nevertheles
 As of yet, for the pentagon game, the following additioanl rule(s) is added:
 - If the randomly obtained vertex, is the same as that which was obtained in a previous iteration, then that is to be ignored, and the "dice" so to speak, must be rolled again.
 For a pentagon, the following image was obtained.
+![alt text](https://github.com/ashish-kp/fractals_from_chaos_game/blob/main/twisted_pent.png)
 
