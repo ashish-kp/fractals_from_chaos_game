@@ -25,6 +25,16 @@ As of yet, for the pentagon game, the following additioanl rule(s) is added:
 For a pentagon, the following image was obtained.
 ![alt text](https://github.com/ashish-kp/fractals_from_chaos_game/blob/main/twisted_pent.png)
 
+## IFS - Iterated Function System
+
+The triangle traced in the beginning is done so, by moving the point forward, by computing the next iteration in the following way.
+
+1) next_point(x, y)_1 = 0.5*x, 0.5*y
+2) next_point(x, y)_2 = 0.5*x + 0.5, 0.5*y
+3) next_point(x, y)_3 = 0.5*x + 0.25, 0.5*y + sqrt(3)*0.25
+
+![alt text](https://github.com/ashish-kp/fractals_from_chaos_game/blob/main/fern.png)
+
 These were first tried out in VPython, and the links are below:
 - [triangle](https://www.glowscript.org/#/user/p.b.ashish786/folder/game/program/trianglegame)
 - [square](https://www.glowscript.org/#/user/p.b.ashish786/folder/game/program/quadranglegame)
