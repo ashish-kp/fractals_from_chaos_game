@@ -20,20 +20,18 @@ But for pentagons, the simple rules, gave a somewhat incoherent, but nevertheles
 ![alt text](https://github.com/ashish-kp/fractals_from_chaos_game/blob/main/norm_pent.png)
 
 ### Tweaked rules
-As of yet, for the pentagon game, the following additioanl rule(s) is added:
+As of yet, for the pentagon game, the following additional rule(s) is added:
 - If the randomly obtained vertex, is the same as that which was obtained in a previous iteration, then that is to be ignored, and the "dice" so to speak, must be rolled again.
 For a pentagon, the following image was obtained.
 ![alt text](https://github.com/ashish-kp/fractals_from_chaos_game/blob/main/twisted_pent.png)
 
-## IFS - Iterated Function System
-
-The triangle traced in the beginning is done so, by moving the point forward, by computing the next iteration in the following way.
-
-1) next_point(x, y)_1 = 0.5*x, 0.5*y
-2) next_point(x, y)_2 = 0.5*x + 0.5, 0.5*y
-3) next_point(x, y)_3 = 0.5*x + 0.25, 0.5*y + sqrt(3)*0.25
+## Specific points and probabilities give beautiful shapes like this:
 
 ![alt text](https://github.com/ashish-kp/fractals_from_chaos_game/blob/main/fern.png)
+
+## Square
+
+For a square, following the usual rules, yielded no fractals. To create a menger sponge like 2d shape (as given in the wikipedia page), the vertices and the center of the sides, in total 8 points should be taken into consideration. After eacg iteration, the point usually moves to half the distance (0.5) of the next point. I tried moving the point to 0.35 times the distance of the next point, to get a nice (or so I would say) Menger Sponge. I don't know 0.35 gives the precise looking Menger Sponge though(disclaimer here).
 
 These were first tried out in VPython, and the links are below:
 - [triangle](https://www.glowscript.org/#/user/p.b.ashish786/folder/game/program/trianglegame)
