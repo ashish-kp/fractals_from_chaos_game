@@ -31,7 +31,7 @@ For a pentagon, the following image was obtained.
 
 ## Square
 
-For a square, following the usual rules, yielded no fractals. To create a menger sponge like 2d shape (as given in the wikipedia page), the vertices and the center of the sides, in total 8 points should be taken into consideration. After eacg iteration, the point usually moves to half the distance (0.5) of the next point. I tried moving the point to 0.35 times the distance of the next point, to get a nice (or so I would say) Menger Sponge. I don't know 0.35 gives the precise looking Menger Sponge though(disclaimer here).
+For a square, following the usual rules, yielded no fractals. To create a menger sponge like 2d shape (as given in the wikipedia page), the vertices and the center of the sides, in total 8 points should be taken into consideration. After eacg iteration, the point usually moves to half the distance (0.5) of the next point. I tried moving the point to 0.35 times the distance of the next point, to get a nice (or so I would say) Menger Sponge. But I don't know whether 0.35 gives the most precise looking Menger Sponge though(disclaimer here).
 
 These were first tried out in VPython, and the links are below:
 - [triangle](https://www.glowscript.org/#/user/p.b.ashish786/folder/game/program/trianglegame)
